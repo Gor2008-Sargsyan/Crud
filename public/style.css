@@ -75,7 +75,11 @@
 }
 
 .admin table th{
-    background-color:blue ;
+    background-color:rgb(11, 11, 131) ;
+}
+
+.admin table td{
+    background-color: gray ;
 }
 
 .admin table td, .admin table th{
