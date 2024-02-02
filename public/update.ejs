@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    box-sizing: border-box;
+}
+
+.admin h2{
+    text-align: center;
+}
+
+.admin .form{
+    width: 50%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(169, 169, 169);
+}
+
+.admin .form label{
+    font-size: larger;
+    display: block;
+}
+
+.admin .form input{
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin .form input[type = file]{
+    font-size: small;
+}
+
+.admin .form input[type = submit]{
+    padding: 0;
+    background-color: blue;
+    color: white;
+}
+
+.admin .form input[type = submit]:hover{
+    background-color: white;
+    color: blue;
+}
+
+
+.admin .form textarea {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    resize: none;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.admin table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    font-size: larger;
+}
+
+.admin table, .admin table tr, .admin table tr td, .admin table tr th {
+    border: 1px black solid;
+}
+
+.admin table tr:nth-child(even) {
+    background-color: gray;
+}
+
+.admin table th{
+    background-color: #009b00;
+}
+
+.admin table td, .admin table th{
+    width: 20%;
+    height: 100px;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="admin">
+        <div class="form">
+            <form class="form" action="/updateData" method="post">
+                <input id="usName" type="text" required name="name" placeholder="Please type your name" value = "<%= obj.name %>"><br><br>
+                <input id="usPassword" type="password" name="password" placeholder="Please type your Password" value = "<%= obj.password %>"><br><br>
+                <input id="usEmail" type="email" name="email" placeholder="Please type your email"  value = "<%= obj.email %>"><br><br>
+                <input id="usDate" type="date" name="date" placeholder="Please type your date"  value = "<%= obj.date %>"><br><br>
+                <input id="usNumber" type="number" name="number" placeholder="Please type your number"  value = "<%= obj.number %>"><br><br>
+                <input id="id" type="hidden" name="id"   value = "<%= obj._id %>"><br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
